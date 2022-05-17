@@ -10,12 +10,13 @@ using namespace std;
 class Solution {
    public:
     int majorityElement(vector<int>& nums) {
-        unordered_map<int, int> count;
-        int n = nums.size();
-        for (int ele : nums) count[ele]++;
-        for (auto ele : count)
-            if (ele.second > n / 2) return ele.first;
-        return -1;
+        // Moore's Voting Algorithm
+        int counter = 0, targetElement;
+        for (int ele : nums) {
+            if (!counter) targetElement = ele;
+            counter += (targetElement == ele) ? 1 : -1;
+        }
+        return targetElement;
     }
 };
 // @lc code=end
