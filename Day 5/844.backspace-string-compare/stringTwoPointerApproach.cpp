@@ -6,6 +6,7 @@
 
 // @lc code=start
 // Using two pointer approach
+// Revisit
 class Solution {
    public:
     bool backspaceCompare(string s, string t) {
