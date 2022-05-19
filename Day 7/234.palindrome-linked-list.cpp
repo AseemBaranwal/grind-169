@@ -25,7 +25,7 @@ using namespace std;
  * };
  */
 // Modified Tortoise Hare Problem
-// Revisit, Solved
+// Revisit
 class Solution {
    public:
     bool isPalindrome(ListNode *head) {
