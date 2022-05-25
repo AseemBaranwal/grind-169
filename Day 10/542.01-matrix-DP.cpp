@@ -12,6 +12,7 @@ class Solution {
    public:
     vector<vector<int>> updateMatrix(vector<vector<int>>& mat) {
         int m = mat.size(), n = mat[0].size(), maxValue = m + n;
+        // Solving for top and left
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (mat[i][j] == 0) continue;
@@ -21,6 +22,7 @@ class Solution {
                 mat[i][j] = min(top, left) + 1;
             }
         }
+        // Solving for right and bottom
         for (int i = m - 1; i >= 0; i--) {
             for (int j = n - 1; j >= 0; j--) {
                 if (mat[i][j] == 0) continue;
